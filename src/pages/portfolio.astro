@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const galleryItems = [
+    { title: "Ochtendnevel in het bos", gradient: "from-[#4a5d3e] via-[#2d3a2e] to-[#1a1b17]", aspect: "aspect-[3/4]" },
+    { title: "Eerste nachtvorst", gradient: "from-[#8ba3b1] via-[#6b8a9e] to-[#3d5a6e]", aspect: "aspect-square" },
+    { title: "Grootse vergezichten", gradient: "from-[#a3b18b] via-[#7a9468] to-[#3d5a2e]", aspect: "aspect-[4/3]" },
+    { title: "Lichtspel in het groen", gradient: "from-[#6b7a5e] via-[#4a5d3e] to-[#2d3a2e]", aspect: "aspect-[3/4]" },
+    { title: "Abstract ijs", gradient: "from-[#8ba3b1] via-[#a3b1c3] to-[#6b8a9e]", aspect: "aspect-[4/5]" },
+    { title: "Stilte aan de waterkant", gradient: "from-[#7a9468] via-[#a3b18b] to-[#4a5d3e]", aspect: "aspect-[3/2]" },
+];
+
+const filters = ["Alles", "Mist & Sfeer", "Vorst & Winter", "Wijde Landschappen", "Detail & Macro"];
+---
+
+<Layout title="Portfolio | Foto Terapel" description="Bekijk de portfolio van Foto Terapel. Verstilde momenten in de natuur, vastgelegd in het noorden van Nederland.">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <Header activePage="portfolio" />
+
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 max-w-3xl">
+            <h1 class="text-5xl md:text-7xl font-light leading-tight mb-6">
+                Verstilde momenten in de <span class="italic text-primary">natuur</span>.
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed">
+                Een verkenning van de Nederlandse landschappen. Van de mysterieuze ochtendmist tot de fragiele details van de winterse vorst.
+            </p>
+        </section>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-3 pb-12 overflow-x-auto">
+            {filters.map((filter, i) => (
+                <button class:list={[
+                    "px-6 py-2 rounded-full text-sm font-medium transition-colors",
+                    i === 0 ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20 text-slate-800"
+                ]}>
+                    {filter}
+                </button>
+            ))}
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="masonry-grid pb-24">
+            {galleryItems.map((item) => (
+                <div class="masonry-item group relative cursor-pointer overflow-hidden rounded-lg">
+                    <div class={`w-full ${item.aspect} bg-gradient-to-br ${item.gradient} transition-transform duration-700 group-hover:scale-105`}></div>
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white italic text-lg">{item.title}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        <!-- Footer -->
+        <Footer />
+    </div>
+</Layout>

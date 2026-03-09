@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Over Mij | Foto Terapel" description="Ontmoet de fotograaf achter Foto Terapel. Gepassioneerd door de natuur en landschappen van het noorden.">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <div class="layout-container flex flex-col grow">
+            <Header activePage="over-mij" />
+
+            <main class="flex-1 max-w-6xl mx-auto w-full px-6 py-12 lg:py-24">
+                <!-- Hero / Portrait Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">Ontmoet de fotograaf</span>
+                        <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-[1.1]">Legt de ziel van het Noorden vast</h1>
+                        <p class="text-lg lg:text-xl text-slate-600 mb-8 leading-relaxed italic">
+                            "In de stilte van de noordelijke natuur vind ik de verhalen die verteld moeten worden door mijn lens."
+                        </p>
+                        <div class="flex gap-4">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                                <span class="text-sm font-medium">Ter Apel, Nederland</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <div class="relative group">
+                            <div class="absolute inset-0 bg-primary/10 rounded-xl translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
+                            <div class="w-full aspect-[4/5] rounded-xl shadow-2xl bg-gradient-to-br from-[#c4cdb5] via-[#a3b18b] to-[#4a5d3e] flex items-center justify-center text-white/60 text-sm">
+                                Portretfoto binnenkort beschikbaar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Bio Section -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-primary/20 pt-16">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold">Mijn Verhaal</h2>
+                        <p class="text-slate-700 leading-relaxed">
+                            Mijn passie voor fotografie begon op de uitgestrekte heidevelden en in de dichte bossen rondom Ter Apel. Wat begon als een hobby om de rust van de zondagochtend vast te leggen, groeide uit tot een professionele roeping.
+                        </p>
+                        <p class="text-slate-700 leading-relaxed">
+                            Ik geloof dat de mooiste momenten niet geposeerd zijn. Ze bevinden zich in de interactie tussen mens en natuur, in het veranderende licht van het gouden uur en in de rauwe eenvoud van het noordelijke landschap. Of het nu gaat om een intiem portret of een weids landschap, mijn doel is altijd om de kijker mee te nemen naar dat ene, verstilde moment.
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold">Passie voor het Noorden</h2>
+                        <p class="text-slate-700 leading-relaxed">
+                            Het Noorden heeft een uniek karakter. Het is eerlijk, soms bar, maar altijd adembenemend mooi. De dynamiek van de wolkenpartijen over de Groningse akkers en de mystieke ochtendmist in de Drentse bossen bieden een oneindig palet aan inspiratie.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="p-6 bg-primary/5 rounded-lg border border-primary/10">
+                                <h4 class="font-bold text-primary mb-2">Stijl</h4>
+                                <p class="text-sm">Natuurlijk licht, authentiek en tijdloos.</p>
+                            </div>
+                            <div class="p-6 bg-primary/5 rounded-lg border border-primary/10">
+                                <h4 class="font-bold text-primary mb-2">Focus</h4>
+                                <p class="text-sm">Landschap, portret &amp; storytelling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote/Call to Action -->
+                <div class="mt-24 text-center py-20 bg-primary/10 rounded-xl px-6">
+                    <h3 class="text-2xl lg:text-3xl font-bold mb-6 italic max-w-2xl mx-auto">
+                        "Laten we samen de herinneringen vastleggen die er echt toe doen."
+                    </h3>
+                    <a href="/contact" class="inline-block bg-primary hover:bg-primary/90 text-background-dark px-10 py-4 rounded-lg font-bold text-lg transition-all">
+                        Plan een kennismaking
+                    </a>
+                </div>
+            </main>
+
+            <Footer />
+        </div>
+    </div>
+</Layout>
